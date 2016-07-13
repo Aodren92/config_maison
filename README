@@ -1,0 +1,19 @@
+Config perso de Vim
+
+Les fleches pour la naviguation sont desactivees
+Pour naviguer dans les fenetres au lieu de crtl + w + fleche, il suffit d'appuyer sur la fleche en mode normal
+Pour creer un onglet facilement ctrl + t
+Pour naviguer entre les onglets : Tab ou tab + shift(previous)
+
+J'utilise les Plugins Suivant 
+
+Vundle pour l'installation des Plugins
+flazz/vim-colorschemes pour les themes
+eparreno/vim-l9 Une lib pour les Plugins
+othree/vim-autocomplpop pour l'autocompletion (modification pour activer les fleches quand la popup apparait)
+scrooloose/syntastic (pour le syntax checker)
+
+Je met souvent mes .h dans un dossier includes et inc ou include,
+Donc dans le vimrc :
+let g:syntastic_c_include_dirs = ['../../../includes', '../../includes','../includes','./includes', '../libft/includes', 'libft/includes']
+Il faut mettre les bons chemins
