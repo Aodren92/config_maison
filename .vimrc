@@ -16,10 +16,19 @@ Plugin 'othree/vim-autocomplpop'
 "Syntax Checker
 Plugin 'scrooloose/syntastic'
 
+
+" syntax hilight
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'luochen1990/rainbow'
+
 " All of your Plugins must be added before the following line
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" Visual settings
+set t_Co=256                     " force vim to use 256 colors
+set background=dark
 
 " coloschemes
 
@@ -27,6 +36,44 @@ colorscheme kalahari
 " diffrentes options
 set number
 
+" rainbow
+let g:rainbow_active = 1
+
+" Highlighting spaces and tabulations {{{
+" (\zs & \ze == start and end of match, \s == any space)
+match ErrorMsg '\s\+$'           " Match trailing whitespace
+match ErrorMsg '\ \+\t'          " & spaces before a tab
+match ErrorMsg '[^\t]\zs\t\+'    " & tabs not at the begining of a line
+match ErrorMsg '\[^\s\]\zs\ \{2,\}' " & 2+ spaces not at the begining of a line
+" }}}
+
+if &t_Co > 2 || has("gui_running")
+	syntax on
+	set hlsearch
+endif
+
+if exists('+colorcolumn')
+	set colorcolumn=80
+endif
+
+
+" autocompletion {{{
+set wildmenu                     " show more than one suggestion for
+" completion
+set wildmode=list:longest        " shell-like completion (up to ambiguity
+" point)
+set wildignore=*.o,*.out,*.obj,*.pyc,.git,.hgignore,.svn,.cvsignore
+
+set autoread                     " watch if the file is modified outside of
+" vim
+set hidden                       " allow switching edited buffers without
+" saving
+" }}}
+
+" split screen below and right instead of vim natural
+set splitbelow
+set splitright
+"
 " desactivation des fleches
 " Remplacer par espaces
 :map <DOWN> :wincmd j<CR>
