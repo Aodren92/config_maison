@@ -1,1 +1,14 @@
+#ls aliases
+
 alias ls='ls -G'
+alias l='ls'
+alias la='ls -a'
+alias lla='ls -la'
+
+#grep color
+alias grep="grep --color"
+
+#vim aliases
+alias vi="vim"
+alias e="vim"
+
