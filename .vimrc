@@ -56,6 +56,13 @@ if exists('+colorcolumn')
 	set colorcolumn=80
 endif
 
+" status line
+set laststatus=2                 " always display the status line
+set shortmess=atI                " short messages to avoid scrolling
+set title
+set ruler                        " show the cursor position all the time
+set showcmd                      " display incomplete commands
+
 
 " autocompletion {{{
 set wildmenu                     " show more than one suggestion for
@@ -87,7 +94,7 @@ set splitright
 :inoremap <RIGHT> <Nop>
 
 "raccourcis pour la creation et la navigation des onglets
-noremap <C-T> :tabedit <space>
+noremap <C-T> :tabedit<space>
 noremap <TAB> :tabnext <cr>
 noremap <S-TAB> :tabprevious <cr>
 
