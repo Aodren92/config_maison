@@ -19,4 +19,9 @@ else
 fi
 unset RED GREEN NORMAL
 
+
+#LSCOLORS 
+
+export LSCOLORS=gxcxcxdxbxegedabagacad
+
 source ~/.config/.bashrc_aliases
