@@ -97,6 +97,14 @@ noremap <C-T> :tabedit<space>
 noremap <TAB> :tabnext <cr>
 noremap <S-TAB> :tabprevious <cr>
 
+"backup files
+
+
+set undodir=~/.vim/.undo//
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
+
+
 "Configuration de syntastic
 let g:syntastic_cpp_compiler = 'gcc'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++ -Wall -Werror -Wextra'
