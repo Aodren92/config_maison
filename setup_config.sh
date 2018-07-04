@@ -19,8 +19,8 @@ fi
 mkdir ~/.vim/.backup ~/.vim/.swp ~/.vim/.undo
 cp -r bundle ~/.vim/ 
 cp .vimrc ~/.vim
-cp .gitconfig ~
-cp .gitignore_global ~
+#cp .gitconfig ~
+#cp .gitignore_global ~
 echo "source ~/.vim/.vimrc" >> ~/.vimrc
 
 vim +PluginInstall
